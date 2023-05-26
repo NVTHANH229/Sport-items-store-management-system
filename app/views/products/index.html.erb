@@ -1,27 +1,25 @@
-
-
-
 <div class="container mx-auto px-4">
   <div class="flex items-center justify-between flex-wrap mb-6">
-    <h1 class="text-3xl font-bold">Products</h1>
+    <h1 class="text-3xl font-bold text-red-500">Products</h1>
 
     <%= link_to new_product_path, class: button_class(theme: "primary") do %>
     Add New Product
     <% end %>
   </div>
 
-  <table class="table-auto border-collapse border-slate-400 w-full">
-    <thead class="bg-slate-50 dark:bg-slate-700">
+   <table class="table-auto border-collapse border-black w-full">
+  <thead class="bg-red-600 bg-red-600">
       <tr>
         
-          <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Name</th>
-        
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Category</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Brand</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Short description</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Size</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Price</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Quantity</th>
+          
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Name</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Category</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Brand</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Short description</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Size</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Price</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Quantity</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left "></th>
                 
       </tr>
     </thead>
@@ -30,16 +28,16 @@
       <% @products.each do |product| %>
       <%= content_tag :tr, id: dom_id(product), class: dom_class(product) do %>
       
-        <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= link_to product.name, product %></td>
+        <td class="border-2 border-black dark:border-black p-4 text-black dark:text-black"><%= link_to product.name, product %></td>
       
 
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= product.category.name %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= product.brand.brand_name %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= product.short_description %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= product.size %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= product.price %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= product.quantity %></td>
-      
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.category.name %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.brand.brand_name %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.short_description %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.size %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.price %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.quantity %></td>
+       <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= link_to 'Show', product %></td>
       
       <% end %>
       <% end %>
