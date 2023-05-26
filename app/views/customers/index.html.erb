@@ -10,7 +10,7 @@
     <% end %>
   </div>
 
-<table class="table-auto border-collapse border-black w-full">
+  <table class="table-auto border-collapse border-black w-full">
   <thead class="bg-red-600 bg-red-600">
       <tr>
         
@@ -19,8 +19,8 @@
                   <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Gender</th>
                   <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Email</th>
                   <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Phone number</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Adress</th>
-                <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"></th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Address</th>
+                 <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"></th>
       </tr>
     </thead>
 
@@ -34,7 +34,7 @@
               <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= customer.gender %></td>
               <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= customer.email %></td>
               <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= customer.phone_number %></td>
-              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= customer.adress %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= customer.address %></td>
       <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= link_to 'Show', customer %></td>
       
       <% end %>

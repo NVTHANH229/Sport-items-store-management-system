@@ -5,11 +5,11 @@ one:
   gender: MyString
   email: MyString
   phone_number: MyString
-  adress: MyString
+  address: MyString
 
 two:
   name: MyString
   gender: MyString
   email: MyString
   phone_number: MyString
-  adress: MyString
+  address: MyString
